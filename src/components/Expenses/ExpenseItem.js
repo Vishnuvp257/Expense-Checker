@@ -19,7 +19,6 @@ const ExpenseItem = (props) => {
         <h2>{title}</h2>
         <Card className="expense-item__price">{props.data.amount}</Card>
       </div>
-      <button onClick={eventHandler}>change title</button>
     </Card>
   );
 };

@@ -1,8 +1,7 @@
 import { useState } from "react";
 
-import Card from "../UI/Card";
 import "./ExpenseForm.css";
-
+                                                              
 const ExpenseForm = (props) => {
   const [userInput, setUserInput] = useState({
     enteredExpense: "",
@@ -32,9 +31,9 @@ const ExpenseForm = (props) => {
     event.preventDefault();
 
     const expenseData = {
-      expense: userInput.enteredExpense,
-      amount: userInput.enteredAmount,
-      date: userInput.enteredDate,
+      title: userInput.enteredExpense,
+      amount: +userInput.enteredAmount,
+      date: new Date(userInput.enteredDate),
     };
 
     props.onSaveForm(expenseData);
