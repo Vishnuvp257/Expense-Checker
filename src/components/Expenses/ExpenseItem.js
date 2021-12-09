@@ -9,7 +9,6 @@ const ExpenseItem = (props) => {
 
   const eventHandler = () => {
     setTitle("updated");
-    //console.log("clicked");
   };
 
   return (
