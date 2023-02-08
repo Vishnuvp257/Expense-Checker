@@ -8,20 +8,20 @@ import "./Expenses.css";
 import React from "react";
 
 const Expenses = (props) => {
-  const [filterBy, setFilterBy] = useState("2020");
+  const [filterBy, setFilterBy] = useState("2019");
 
   const changeFilterHandler = (year) => {
     setFilterBy(year);
   };
 
   const filteredArray = props.expenses.filter(
-    (expense) => expense.date.getFullYear() == filterBy
+    (expense) => expense.date.getFullYear() === filterBy
   );
 
   return (
     <Card className="expenses">
       <ExpenseFilter selected={filterBy} onChangeFilter={changeFilterHandler} />
-      <ExpenseList items={filteredArray}/>
+      <ExpenseList items={filteredArray} />
     </Card>
   );
 };
